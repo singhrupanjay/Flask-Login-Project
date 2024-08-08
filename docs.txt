@@ -1,0 +1,44 @@
+STEPS
+
+CREATE PYTHON VIRTUAL ENVIRONMENT
+    python -m venv venv  
+
+ACTIVATE PYTHON VIRTUAL ENVIRONMENT
+    venv\Scripts\activate
+
+INSTALL FLASK
+    pip install Flask
+
+INSTALL MYSQL IN YOUR SYSTEM
+    https://www.youtube.com/watch?v=fzd6-qcLzrE&t=183s
+
+CREATE REQUIRED DATABASE AND TABLE WITH APPROPRIATE ATTRIBUTES
+
+    CREATE DATABASE IF NOT EXISTS `1FlaskDB` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+    USE `1FlaskDB`;
+
+    CREATE TABLE IF NOT EXISTS `accounts`(
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `username` varchar(50) NOT NULL,
+        `password` varchar(50) NOT NULL,
+        `email` varchar(100) NOT NULL,
+        PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+    
+OPEN MYSQL IN CMD
+    mysql -u root -p
+    Enter password: 123Sql!@#
+        VIEW DATABASES
+            SHOW DATABASES;
+
+Install ‘mysqlbd’ module in your venv.
+    pip install flask-mysqldb
+
+SQL PASSWORD
+    123Sql!@#
+
+RUN FLASK APP
+    Navigate to login folder then type
+        flask run
+
+
